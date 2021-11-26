@@ -1,0 +1,10 @@
+{
+    "name": "EmploymentPriority",
+    "version_number": "1.0.1",
+    "website_url": "https://github.com/mhgar/EmploymentPriority",
+    "description": "Prioritize employment of workplaces.",
+    "dependencies": [
+        "BepInEx-BepInExPack_Timberborn-5.4.16",
+        "Timberborn_Central-TimberAPI-0.1.0"
+    ]
+}

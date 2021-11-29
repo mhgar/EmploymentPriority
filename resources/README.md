@@ -6,7 +6,12 @@ If you need a workplace to have a worker immediately, you can click the 'employ 
 
 This mod also works correctly with saved games and the priority assignment tool.
 
-## Versions to use
+## Versions
 
-* *1.0.2* - Experimental version of Timberborn
-* *1.0.1* - Standard version of Timberborn
+- *1.0.2*
+    - Updated mod to version of Timberborn.
+    - Fixed issues where employment was possible on most objects.
+- *1.0.1* 
+    - Fixed missing dependencies.
+- *1.0.0*
+    - Initial release.

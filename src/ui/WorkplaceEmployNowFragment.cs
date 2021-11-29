@@ -85,7 +85,7 @@ namespace Hectare.Timberborn.EmploymentPriority
                 return;
             }
 
-            var workers = workplaceDistrict.DistrictPopulation.GetEnabledBeavers<Worker>();
+            var workers = workplaceDistrict.DistrictPopulation.GetEnabledCharacters<Worker>();
 
             // Try grab an unemployed beaver first.
             // Make sure the worker is within the same district.

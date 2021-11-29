@@ -60,4 +60,8 @@
 		<Reference Include="./libs/Timberborn.Characters.dll" />
 		<Reference Include="./libs/Timberborn.TickSystem.dll" />
 	</ItemGroup>
+
+	<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+	  <Exec Command="xcopy /y /d  &quot;$(ProjectDir)obj\Release\netstandard2.1\EmploymentPriority.dll&quot; &quot;$(ProjectDir)resources\&quot;" />
+	</Target>
 </Project>

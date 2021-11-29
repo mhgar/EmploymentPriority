@@ -44,6 +44,7 @@ namespace Hectare.Timberborn.EmploymentPriority
         {
             _workplace = entity.GetComponent<Workplace>();
 
+            // TODO: Make this work
             if (!IsValidWorkplace())
                 ClearFragment();
         }

@@ -43,10 +43,6 @@ namespace Hectare.Timberborn.EmploymentPriority
         public void ShowFragment(GameObject entity) 
         {
             _workplace = entity.GetComponent<Workplace>();
-
-            // TODO: Make this work
-            if (!IsValidWorkplace())
-                ClearFragment();
         }
 
         public void ClearFragment()
@@ -56,7 +52,10 @@ namespace Hectare.Timberborn.EmploymentPriority
 
         public void UpdateFragment()
         {
-            _root.ToggleDisplayStyle(true);
+            if (IsValidWorkplace())
+                _root.ToggleDisplayStyle(true);
+            else
+                _root.ToggleDisplayStyle(false);
         }
 
         private bool IsValidWorkplace()
@@ -65,8 +64,7 @@ namespace Hectare.Timberborn.EmploymentPriority
 
             return _workplace is not null &&
                 _workplace.enabled &&
-                _workplace.Understaffed &&
-                (constructionSite?.IsFinished ?? true);
+                _workplace.Understaffed;
         }
 
         private void OnEmployButtonClicked()

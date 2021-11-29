@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using Timberborn.Buildings;
 using Timberborn.Characters;
+using Timberborn.ConstructibleSystem;
 using Timberborn.CoreUI;
 using Timberborn.EntityPanelSystem;
 using Timberborn.GameDistricts;
@@ -41,8 +43,12 @@ namespace Hectare.Timberborn.EmploymentPriority
         public void ShowFragment(GameObject entity) 
         {
             _workplace = entity.GetComponent<Workplace>();
+            var constructionSite = entity.GetComponent<Constructible>();
 
-            if (_workplace == null)
+            if (!_workplace?.enabled ?? true)
+                ClearFragment();
+
+            if (!constructionSite?.IsFinished ?? true)
                 ClearFragment();
         }
 
@@ -58,10 +64,11 @@ namespace Hectare.Timberborn.EmploymentPriority
 
         private void OnEmployButtonClicked()
         {
-            // Make sure we can actually fit the worker. TODO: Is enabled check?
-            if (!_workplace.Understaffed)
+            // Make sure we can actually fit the worker.
+            var constructionSite = _workplace.GetComponent<Constructible>();
+            if (!_workplace.Understaffed || !_workplace.enabled || (!constructionSite?.IsFinished ?? true))
             {
-                Debug.Log("Workplace is not understaffed.");
+                Debug.Log("Workplace is not able to accept workers.");
                 return;
             }
 

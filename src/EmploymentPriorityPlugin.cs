@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Hectare.Timberborn.EmploymentPriority
 {
-    [BepInPlugin("hectare.timberborn.employmentpriority", "EmploymentPriority", "1.0.0")]
+    [BepInPlugin("hectare.timberborn.employmentpriority", "EmploymentPriority", "1.0.2")]
     [BepInDependency("com.timberapi.timberapi")]
     [HarmonyPatch]
     public class EmploymentPriorityPlugin : BaseUnityPlugin

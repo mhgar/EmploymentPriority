@@ -401,3 +401,4 @@ libs/
 libs
 .DS_Store
 EmploymentPriority.dll
+*.zip

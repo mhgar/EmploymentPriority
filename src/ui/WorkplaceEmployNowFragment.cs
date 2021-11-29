@@ -43,12 +43,8 @@ namespace Hectare.Timberborn.EmploymentPriority
         public void ShowFragment(GameObject entity) 
         {
             _workplace = entity.GetComponent<Workplace>();
-            var constructionSite = entity.GetComponent<Constructible>();
 
-            if (!_workplace?.enabled ?? true)
-                ClearFragment();
-
-            if (!constructionSite?.IsFinished ?? true)
+            if (!IsValidWorkplace())
                 ClearFragment();
         }
 
@@ -62,11 +58,20 @@ namespace Hectare.Timberborn.EmploymentPriority
             _root.ToggleDisplayStyle(true);
         }
 
+        private bool IsValidWorkplace()
+        {
+            var constructionSite = _workplace?.GetComponent<Constructible>();
+
+            return _workplace is not null &&
+                _workplace.enabled &&
+                _workplace.Understaffed &&
+                (constructionSite?.IsFinished ?? true);
+        }
+
         private void OnEmployButtonClicked()
         {
             // Make sure we can actually fit the worker.
-            var constructionSite = _workplace.GetComponent<Constructible>();
-            if (!_workplace.Understaffed || !_workplace.enabled || (!constructionSite?.IsFinished ?? true))
+            if (!IsValidWorkplace())
             {
                 Debug.Log("Workplace is not able to accept workers.");
                 return;

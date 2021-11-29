@@ -6,16 +6,14 @@ If you need a workplace to have a worker immediately, you can click the 'employ 
 
 This mod also works correctly with saved games and the priority assignment tool.
 
-## Known issues
-
-- 'Employ now' button doesn't hide correctly in the entity panel regardless of the object.
-
 ## Versions
 
-- *1.0.2*
+- **1.0.3**
+    - Fixed 'employ now' button showing up when it shouldn't.
+- **1.0.2**
     - Updated mod to beta version of Timberborn.
     - Fixed using 'employ now' on some non-workplace objects resulting in a crash.
-- *1.0.1* 
+- **1.0.1**
     - Fixed missing dependencies.
-- *1.0.0*
+- **1.0.0**
     - Initial release.

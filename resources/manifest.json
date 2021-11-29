@@ -2,7 +2,7 @@
     "name": "EmploymentPriority",
     "version_number": "1.0.2",
     "website_url": "https://github.com/mhgar/EmploymentPriority",
-    "description": "Assign priority to workplaces and force employment.",
+    "description": "Assign priority to workplaces and immediately employ workers.",
     "dependencies": [
         "BepInEx-BepInExPack_Timberborn-5.4.16",
         "Timberborn_Central-TimberAPI-0.1.0"

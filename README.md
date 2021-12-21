@@ -21,9 +21,7 @@ Follow these steps if you want to build the mod.
 
 I first recommend installing the mod via r2modman. This will show you the folder structure as well as getting DLL dependencies. 
 
-1. Run a NuGet restore
-2. Created a folder called `libs` in the root directory
-3. Copy DLLs from the game folder into `libs`, you'll also need some DLLs from dependencies installed via r2modman
-4. Build the mod
-5. Copy `EmploymemtPriority.dll` from the `obj` folder into `resources`, or make a new folder for everything
-6. Install that folder into your BepInEx plugins by a method of your choosing
+1. Run a NuGet restore, you may need to add BepInEx sources to Visual Studio, see https://github.com/BepInEx/BepInEx.NuGetUpload.Service/wiki#how-to-download-game-assembly-packages
+2. Build the mod
+3. Copy `EmploymemtPriority.dll` from the `obj` folder into `resources`, or make a new folder for everything
+4. Install that folder into your BepInEx plugins by a method of your choosing

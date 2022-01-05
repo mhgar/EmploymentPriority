@@ -10,7 +10,7 @@ This mod also works correctly with saved games and the priority assignment tool.
  
 - **1.0.5**
     - Updated TimberAPI version to 0.2.1.
-    - Got employ now button working again, will fix styling later.
+    - Got 'employ now' button working again, will fix styling later.
 - **1.0.4**
     - Updated to Timberborn Update 1.
     - Updated TimberAPI version to 0.1.1.

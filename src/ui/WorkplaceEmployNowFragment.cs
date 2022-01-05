@@ -17,12 +17,12 @@ namespace Hectare.Timberborn.EmploymentPriority
 {
     public class WorkplaceEmployNowFragment : IEntityPanelFragment
     {
-        private readonly IUIBuilder _builder;
+        private readonly UIBuilder _builder;
 
         private VisualElement _root;
         private Workplace _workplace;
 
-        public WorkplaceEmployNowFragment(IUIBuilder builder)
+        public WorkplaceEmployNowFragment(UIBuilder builder)
         {
             _builder = builder;
         }
@@ -30,12 +30,14 @@ namespace Hectare.Timberborn.EmploymentPriority
         public VisualElement InitializeFragment()
         {
             _root = _builder.CreateComponentBuilder()
-                .AddWrapper(builder => builder
-                    .AddButton("Employ now", name: "employBotton", width: new Length(120, Length.Unit.Pixel)),
-                    justifyContent: Justify.SpaceAround)
+                .CreateButton()
+                .SetText("Employ now")
+                .SetName("employButton")
+                .SetWidth(120)
+                .SetJustifyContent(Justify.SpaceAround)
                 .Build();
 
-            _root.Q<Button>("employBotton").clicked += OnEmployButtonClicked;
+            _root.Q<Button>("employButton").clicked += OnEmployButtonClicked;
 
             return _root;
         }

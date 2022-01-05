@@ -5,6 +5,6 @@
     "description": "Assign priority to workplaces and immediately employ workers.",
     "dependencies": [
         "BepInEx-BepInExPack_Timberborn-5.4.16",
-        "Timberborn_Central-TimberAPI-0.2.0"
+        "Timberborn_Central-TimberAPI-0.2.1"
     ]
 }

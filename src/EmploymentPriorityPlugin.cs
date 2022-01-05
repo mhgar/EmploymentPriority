@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Hectare.Timberborn.EmploymentPriority
 {
-    [BepInPlugin("hectare.timberborn.employmentpriority", "EmploymentPriority", "1.0.2")]
+    [BepInPlugin("hectare.timberborn.employmentpriority", "EmploymentPriority", "1.0.5")]
     [BepInDependency("com.timberapi.timberapi")]
     [HarmonyPatch]
     public class EmploymentPriorityPlugin : BaseUnityPlugin
@@ -16,7 +16,7 @@ namespace Hectare.Timberborn.EmploymentPriority
             Debug.Log($"Plugin hectare.timberborn.employmentpriority is loaded...");
 
             Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly());
-            TimberAPI.DependecyRegistry.AddConfigurator(new WorkplaceEmployNowFragmentConfigurator());
+            TimberAPI.DependencyRegistry.AddConfigurator(new WorkplaceEmployNowFragmentConfigurator());
         }
     }
 }
